@@ -175,6 +175,23 @@ not_string('is not') → 'not is not'	'not is not'	OK
 not_string('no') → 'not no'	'not no'	OK
 '''
 
+def missing_char(str, n):
+  return str[:n] + str[n + 1:]
+
+'''
+Expected	Run		
+missing_char('kitten', 1) → 'ktten'	'ktten'	OK	
+missing_char('kitten', 0) → 'itten'	'itten'	OK	
+missing_char('kitten', 4) → 'kittn'	'kittn'	OK	
+missing_char('Hi', 0) → 'i'	'i'	OK	
+missing_char('Hi', 1) → 'H'	'H'	OK	
+missing_char('code', 0) → 'ode'	'ode'	OK	
+missing_char('code', 1) → 'cde'	'cde'	OK	
+missing_char('code', 2) → 'coe'	'coe'	OK	
+missing_char('code', 3) → 'cod'	'cod'	OK	
+missing_char('chocolate', 8) → 'chocolat'	'chocolat'	OK
+'''
+
 def front_back(str):
   if (len(str) > 1):
     new_str = str[-1:] + str[1:len(str) - 1] + str[0:1]

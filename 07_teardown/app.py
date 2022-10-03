@@ -26,4 +26,5 @@ INVESTIGATIVE APPROACH:
 <Your concise summary of how
  you and your team set about
  "illuminating the cave of ignorance" here...>
+ We combined our knowledge to attempt to answer the qccs
 '''

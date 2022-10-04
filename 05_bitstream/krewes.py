@@ -1,14 +1,24 @@
-from random import randint
+"""
+RANDO: Jian Hong Li, Ryan Lee
+Soft Dev, pd 8
+K05 -- Krewes
+2022-09-30
+time spent: (classtime) 2 hrs
+DISCO: 
+    To open a file you need file.open("file_name")
+    You can then get the text of the file using file.read()
+    To split a string into a list from a sequence of character, you can do .split("squence") 
+QCC:
+    What happens when you split a string twice? Will it be in a list within a list?
+OPS Summary:
+    1. Open krewes.txt and read it by using .read()method, which converts it to a string
+    2. Split the string into list, separated by "@@@"
+    3. Split each strings from the list into pd list, devo list, and ducky list by splitting "$$$"
+    4. Using a for loop to input all the information into a dictionary
+    5. Input the dictionary into the getRandom method to return what we want
+"""
 
-krewes1 = {1:["1", "2", "3"], 2:["A", "B", "C"]}
-krewes2 = {
-    2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "CORINA",  "CRAIG",  "FANG MIN",  "JEFF",  "KONSTANTIN",  "AARON",  "VIVIAN",  "AYMAN",  "TALIA",  "FAIZA",  "ZIYING",  "YUK KWAN",  "DANIEL",  "WEICHEN",  "MAYA",  "ELIZABETH",  "ANDREW",  "VANSH",  "JONATHAN",  "ABID",  "WILLIAM",  "HUI",  "ANSON",  "KEVIN",  "DANIEL",  "IVAN",  "JASMINE",  "JEFFREY", "Ruiwen"],
-    7:["DIANA",  "DAVID",  "SAM",  "PRATTAY",  "ANNA",  "JING YI",  "ADEN",  "EMERSON",  "RUSSELL",  "JACOB",  "WILLIAM",  "NADA",  "SAMANTHA",  "IAN",  "MARC",  "ANJINI",  "JEREMY",  "LAUREN",  "KEVIN",  "RAVINDRA",  "SADI",  "EMILY",  "GITAE",  "MAY",  "MAHIR",  "VIVIAN",  "GABRIEL",  "BRIANNA",  "JUN HONG",  "JOSEPH",  "MATTHEW",  "JAMES",  "THOMAS",  "NICOLE",  "Karen"],
-    8:["ALEKSANDRA",  "NAKIB",  "AMEER",  "HENRY",  "DONALD",  "YAT LONG",  "SEBASTIAN",  "DAVID",  "YUKI",  "SHAFIUL",  "DANIEL",  "SELENA",  "JOSEPH",  "SHINJI",  "RYAN",  "APRIL",  "ERICA",  "JIAN HONG",  "VERIT",  "JOSHUA",  "WILSON",  "AAHAN",  "GORDON",  "JUSTIN",  "MAYA",  "FAIYAZ",  "SHREYA",  "ERIC",  "JEFFERY",  "BRIAN",  "KEVIN",  "SAMSON",  "BRIAN",  "HARRY",  "Wanying", "Kevin"]
-}
-krewes3 = {}
-krewes4 = {1:["1"], 2:[]}
-krewes5 = {1:[], 2:[]}
+from random import randint
 
 file = open("krewes.txt")
 text = file.read()
@@ -41,7 +51,7 @@ def categorize(s):
 def getRandom(dictionary):
     
     if len(dictionary) == 0:
-        return "ERROR: Dictionary has no values"  	 
+        return "ERROR: Dictionary has no values" 
     key = []
     for e in dictionary.keys(): #gets all the keys
         key.append(e)

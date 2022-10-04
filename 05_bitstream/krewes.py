@@ -1,5 +1,4 @@
 from random import randint
-import re
 
 krewes1 = {1:["1", "2", "3"], 2:["A", "B", "C"]}
 krewes2 = {
@@ -24,16 +23,25 @@ def categorize(s):
     individual = s.split("@@@")
     for e in individual:
         t = e.split("$$$")
-        pd = t[0]
-        devo = t[1]
-        ducky = t[2]
-    for p in range(0, len(pd) - 1)
-        diction.add(pd[p], devo[p] + ducky[p])
+        pd.append(t[0])
+        devo.append(t[1])
+        ducky.append(t[2])
+    for p in range(0, len(pd)):
+        exists = False
+        l = [devo[p] + " " + ducky[p]]
+        for k in diction.keys():
+            if pd[p] == k:
+                diction[pd[p]] = diction[pd[p]] + l
+                exists = True
+        if not exists:
+            diction[pd[p]] = l
+    return None
+
 
 def getRandom(dictionary):
     
     if len(dictionary) == 0:
-        return "ERROR: Dictionary has no values"       
+        return "ERROR: Dictionary has no values"  	 
     key = []
     for e in dictionary.keys(): #gets all the keys
         key.append(e)
@@ -47,10 +55,7 @@ def getRandom(dictionary):
             r = randint(0, len(dictionary.get(period))-1) #chooses random index of the list associated with the random key
             k = dictionary.get(period)  #gets the list associated with the random key
             break
-    return k[r] #returns value at random index of random list
-
-print(getRandom(krewes1))
-print(getRandom(krewes2))
-print(getRandom(krewes3))
-print(getRandom(krewes4))
-print(getRandom(krewes5))
+    return k[r] #returns value at random index of random lis
+categorize(text)
+print(diction)
+print(getRandom(diction))

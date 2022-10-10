@@ -1,4 +1,10 @@
-# your heading here
+"""
+Team M3HT: Shinji Kusakabe, Joseph Jeon, Ryan Lee
+Softdev
+k07 -- teardown
+2022-10-03
+time spent: 1 hr
+"""
 
 from flask import Flask
 
@@ -14,6 +20,7 @@ app.run()  # Q5: Where have you seen similar constructs in other languages?
 
 '''
 DISCO:
+- "No hablo queso" prints on a website
 QCC:
 0. I have not seen this syntax before
 1. Referencing files

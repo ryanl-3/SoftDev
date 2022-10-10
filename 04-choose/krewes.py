@@ -1,5 +1,7 @@
 """
 Team M3HT: Shinji Kusakabe, Joseph Jeon, Ryan Lee
+SoftDev
+09/23/2022
 DISCO: random.choice is cool
 QCC: 
 """

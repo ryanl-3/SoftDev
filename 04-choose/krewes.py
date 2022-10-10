@@ -3,6 +3,7 @@ Team M3HT: Shinji Kusakabe, Joseph Jeon, Ryan Lee
 SoftDev
 k04 -- krewes
 2022-09-23
+time spent: 1 hr
 DISCO: random.choice is cool
 QCC: 
 """

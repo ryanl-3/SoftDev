@@ -2,7 +2,9 @@
 # Team: Ducks
 # Luigi, Alfred, Soy
 # SoftDev
-# Oct 2022
+# K10 -- flask-jinja
+# 2022-10-13
+# time spent: .6
 DISCO:
 Q0- There will be a this function does not exist error because we call
 render_template( 'model_tmplt.html', foo="fooooo", collection=coll)

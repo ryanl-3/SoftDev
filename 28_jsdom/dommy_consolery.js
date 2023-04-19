@@ -36,10 +36,11 @@ var j = 20;
 //assign an anonymous fxn to a var
 var f = function(x) {
   var j=30;
-  return j+x;
+  console.log("print");
+  return j + x;
 };
 
-console.log(f(5));
+//console.log(f(5));
 
 
 //instantiate an object
@@ -60,7 +61,7 @@ var addItem = function(text) {//changes the html and adds the text variable as a
   list.appendChild(newitem);
 };
 
-addItem("this is text");
+//addItem("this is text");
 
 
 var removeItem = function(n) {//removes element at index n
@@ -68,7 +69,7 @@ var removeItem = function(n) {//removes element at index n
   listitems[n].remove();
 };
 
-removeItem(0);
+//removeItem(0);
 
 
 var red = function() {
@@ -121,12 +122,12 @@ function gcd(a, b){
   return gcd(b, a%b);
 }
 
-console.log(gcd(2,2));//2
-console.log(gcd(4,2));//2
-console.log(gcd(2,4));//2
-console.log(gcd(1,1));//1
-console.log(gcd(7,5));//1
-console.log(gcd(64,40));//8
+// console.log(gcd(2,2));//2
+// console.log(gcd(4,2));//2
+// console.log(gcd(2,4));//2
+// console.log(gcd(1,1));//1
+// console.log(gcd(7,5));//1
+// console.log(gcd(64,40));//8
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
@@ -136,4 +137,5 @@ const myFxn = (param1, param2) => {
   return retVal;
 };
 
-
+var dasbut = document.getElementById("b");
+dasbut.addEventListener('click', f);

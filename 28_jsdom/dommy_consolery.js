@@ -61,7 +61,7 @@ var addItem = function(text) {//changes the html and adds the text variable as a
   list.appendChild(newitem);
 };
 
-addItem("this is text");
+//addItem("this is text");
 
 
 var removeItem = function(n) {//removes element at index n

@@ -51,6 +51,7 @@ var o = { 'name' : 'Thluffy',
             return x+30;
           }
         };
+//console.log(o['age']);
 
 
 var addItem = function(text) {//changes the html and adds the text variable as another list element
@@ -60,7 +61,7 @@ var addItem = function(text) {//changes the html and adds the text variable as a
   list.appendChild(newitem);
 };
 
-//addItem("this is text");
+addItem("this is text");
 
 
 var removeItem = function(n) {//removes element at index n

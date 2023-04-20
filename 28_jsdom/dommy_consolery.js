@@ -36,7 +36,6 @@ var j = 20;
 //assign an anonymous fxn to a var
 var f = function(x) {
   var j=30;
-  console.log("print");
   return j + x;
 };
 
@@ -136,6 +135,13 @@ const myFxn = (param1, param2) => {
   // body
   return retVal;
 };
-
+addItem(fib(5));
+addItem(fact(5));
+addItem(gcd(5,10));
 var dasbut = document.getElementById("b");
-dasbut.addEventListener('click', f);
+dasbut.addEventListener('click', ()=>{addItem("fib of 5 is: " + fib(5))});
+dasbut.addEventListener('click', ()=>{addItem("factorial of 5 is: " + fact(5))});
+dasbut.addEventListener('click', ()=>{addItem("gcd of 5 and 10 is: " + gcd(5,10))});
+var st = document.getElementById("s");
+s.addEventListener('click', ()=>{stripe()});
+//()=>{console.log()}

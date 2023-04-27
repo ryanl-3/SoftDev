@@ -13,18 +13,18 @@ ctx.fillStyle = "blue";
 var requestId;
 
 var clear = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     ctx.clearRect(0, 0, c.width, c.height);
 };
 
 var dvdLogoSetup = function(){
     window.cancelAnimationFrame(requestId);
 
-    var rectWidth = 30;
-    var rectHeight = 30;
+    var rectWidth = 100;
+    var rectHeight = 70;
     
-    var rectX = c.width/2;
-    var rectY = c.height/2;
+    var rectX = Math.floor((c.width - rectWidth) * Math.random());
+    var rectY = Math.floor((c.height - rectHeight) * Math.random());
 
     var xVel = 1;
     var yVel = 1;
@@ -35,10 +35,10 @@ var dvdLogoSetup = function(){
     var dvdLogo = function() {
         ctx.clearRect(0,0,c.width,c.height);
         ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
-        if(rectX <= 0 || rectX >= c.width){
+        if(rectX < 0 || rectX > c.width - rectWidth){
             xVel = -1 * xVel;
         }
-        if(rectY <= 0 || rectY >= c.height){
+        if(rectY < 0 || rectY > c.height - rectHeight){
             yVel = -1 * yVel;
         }
         rectX += xVel;
